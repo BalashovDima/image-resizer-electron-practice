@@ -1,0 +1,17 @@
+{
+  "name": "image-resizer-electron-practice",
+  "productNmae": "Image resizer",
+  "version": "1.0.0",
+  "description": "App to resize images",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Dmytro Balashov",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^28.1.1",
+    "resize-img": "^2.0.0",
+    "toastify-js": "^1.12.0"
+  }
+}
