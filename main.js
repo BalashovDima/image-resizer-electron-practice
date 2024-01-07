@@ -1,6 +1,7 @@
 const path = require('path');
 const { app, BrowserWindow } = require('electron');
 
+const isDev = process.env.NODE_DEV !== 'production';
 const isMac = process.platform === 'darwin';
 
 function createMainWindow() {
@@ -9,6 +10,12 @@ function createMainWindow() {
         width: 500,
         height: 600,
     });
+
+    // Open devtools if in dev environment 
+    if(isDev) {
+        mainWindow.webContents.openDevTools();
+        // one other dev thing to use is electronmon (npx electronmon .)
+    }
 
     mainWindow.loadFile(path.join(__dirname, './renderer/index.html'));
 }
